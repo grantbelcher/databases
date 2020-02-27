@@ -1,3 +1,5 @@
+
+
 CREATE DATABASE chat;
 
 USE chat;
@@ -12,9 +14,11 @@ CREATE TABLE messages (
   /* Describe your table here.*/
   message_id INT AUTO_INCREMENT PRIMARY KEY,
   text VARCHAR(140),
+  user_id INT,
   FOREIGN KEY(user_id)
        REFERENCES users(user_id)
 );
+
 
 /* Create other tables and define schemas for them here! */
 
